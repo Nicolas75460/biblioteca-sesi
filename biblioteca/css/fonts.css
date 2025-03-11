@@ -1,0 +1,19 @@
+@font-face {
+    font-family: "Gemstone";
+    src: url(./assets/gemstone/Gemstone.ttf);
+}
+
+@font-face {
+    font-family: "Dripping";
+    src: url(./assets/a_dripping_marker/adrip1.ttf);
+}
+
+@font-face {
+    font-family: "Caviar";
+    src: url(./assets/caviar_dreams/CaviarDreams.ttf);
+}
+
+@font-face {
+    font-family: "Don";
+    src: url(./assets/don_graffiti/DonGraffiti.otf)
+}

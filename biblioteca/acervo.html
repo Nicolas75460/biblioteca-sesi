@@ -1,0 +1,2305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Biblioteca</title>
+  <link rel="stylesheet" href="./css/acervo.css">
+  <link rel="stylesheet" href="./css/fonts.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header com título e menu -->
+  <header class="header">
+    <img class="logo" src="" alt="">
+    <h3 class="subtitle">Biblioteca Sônia Turri</h3>
+    <nav class="menu-icon" onclick="toggleMenu()">
+      <svg xmlns="http://www.w3.org/1000/svg" width="50" height="40" fill="currentColor" class="bi bi-list"
+        viewBox="0 0 16 16">
+        <path fill-rule="evenodd"
+          d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5" />
+      </svg>
+    </nav>
+  </header>
+  <!-- Menu -->
+  <aside class="side-menu" id="side-menu">
+    <button class="close-btn" onclick="toggleMenu()">✖</button>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="acervo.html">Acervo</a></li>
+      <li><a href="calendarios.html">Calendários</a></li>
+      <li><a href="clubes.html">Clubes e Oficinas</a></li>
+      <li><a href="Emprestimo2.html">Empréstimo</a></li>
+      <li><a href="recomendacoesLivros.html">Recomendações</a></li>
+      <li><a href="ListaLiteraria.html">Lista Literária</a></li>
+      <li><a href="sobreNos.html">Sobre nós</a></li>
+    </ul>
+  </aside>
+
+  <!-- ResumoAcervo -->
+  <section id="acervo" class="section acervo">
+    <!-- Índice -->
+    <h3>Índice (Ordem Alfabética)</h3>
+    <nav id="indice">
+      <div class="colunas">
+        <ul>
+          <h6>Letra A</h6>
+          <li><a href="#Administracao">Administração (658)</a></li>
+          <li><a href="#Alimentacao">Alimentação (641)</a></li>
+          <li><a href="#Arquitetura">Arquitetura (720)</a></li>
+          <li><a href="#Artes">Artes (700)</a></li>
+          <li><a href="#ArtesPlasticas">Artes plásticas (730)</a></li>
+          <li><a href="#Astronomia">Astronomia (520)</a></li>
+          <li><a href="#Atlas">Atlas (030)</a></li>
+          <h6>Letra B</h6>
+          <li><a href="#BemEstarSocialESustentabilidade">Bem estar social e Sustentabilidade (360)</a></li>
+          <li><a href="#BiografiaDeEscritoresHistoriadoresECriticos">Biografia de Escritores, Historiadores e Críticos
+              (928)</a></li>
+          <li><a href="#BiografiaDePintores">Biografia de pintores (927.59)</a></li>
+          <li><a href="#Biografias">Biografias (920)</a></li>
+          <li><a href="#Biologia">Biologia (574)</a></li>
+          <li><a href="#BiologiaEmMeioAmbiente">Biologia em meio ambiente (580)</a></li>
+          <h6>Letra C</h6>
+          <li><a href="#CienciaDaInformacaoEBiblioteca">Ciência da informação e biblioteca (020)</a></li>
+          <li><a href="#CienciaMedicaESaude">Ciência Medica e Saúde (610)</a></li>
+          <li><a href="#Ciencias">Ciências (500)</a></li>
+          <li><a href="#CienciasPoliticas">Ciências Politicas (320)</a></li>
+          <li><a href="#CienciasSociais">Ciências Sociais (300)</a></li>
+          <li><a href="#ContosBrasileiros">Contos Brasileiros (869.9301)</a></li>
+          <li><a href="#ContosDeFadasInfantoJuvenil">Contos de fadas Infanto-juvenil (398.21)</a></li>
+          <li><a href="#CronicasBrasileiras">Crônicas Brasileiras (869.9308)</a></li>
+          <h6>Letra D</h6>
+          <li><a href="#Dicionario">Dicionário (030)</a></li>
+          <h6>Letra E</h6>
+          <li><a href="#Ecologia">Ecologia (340.2)</a></li>
+          <li><a href="#Economia">Economia (330)</a></li>
+          <li><a href="#Educacao">Educação (370)</a></li>
+          <li><a href="#Enciclopedia">Enciclopédia</a></li>
+        </ul>
+        <ul>
+          <li><a href="#Engenharia">Engenharia (620)</a></li>
+          <li><a href="#EsportesJogos">Esportes/Jogos (796)</a></li>
+          <h6>Letra F</h6>
+          <li><a href="#FabulasEFolclore">Fábulas e Folclore(398)</a></li>
+          <li><a href="#FabulasInfantoJuvenil">Fábulas Infanto–Juvenil (398.2454)</a></li>
+          <li><a href="#Filosofia">Filosofia (100)</a></li>
+          <li><a href="#FisicaEQuimica">Física e química (530/540)</a></li>
+          <li><a href="#FolcloreContosELendas">Folclore/Contos e Lendas (398/398.2)</a></li>
+          <li><a href="#Fotografia">Fotografia (770)</a></li>
+          <h6>Letra G</h6>
+          <li><a href="#Geociencias">Geociências (550)</a></li>
+          <li><a href="#Geografia">Geografia (910)</a></li>
+          <li><a href="#GeografiaDaAmericaDoSul">Geografia da América do Sul (918)</a></li>
+          <li><a href="#Gramatica">Gramática (469.5)</a></li>
+          <li><a href="#GruposSociais">Grupos Sociais (305)</a></li>
+          <h6>Letra H</h6>
+          <li><a href="#HistoriaDaAfrica">História da África (960)</a></li>
+          <li><a href="#HistoriaDaAmericaCentral">História da América Central (972)</a></li>
+          <li><a href="#HistoriaDaAmericaDoNorte">História da América do Norte (970)</a></li>
+          <li><a href="#HistoriaDaAmericaDoSul">História da América do Sul (980)</a></li>
+          <li><a href="#HistoriaDaAsia">História da Ásia (950)</a></li>
+          <li><a href="#HistoriaDaEuropa">História da Europa (940)</a></li>
+          <li><a href="#HistoriaDoBrasil">História do Brasil (981)</a></li>
+          <li><a href="#HistoriaDoMundoAntigo">História do mundo antigo (930)</a></li>
+          <li><a href="#HistoriaEmQuadrinhos">História em Quadrinhos (741.5)</a></li>
+          <li><a href="#HistoriaGeral">História Geral (909)</a></li>
+          <h6>Letra I</h6>
+          <h6>-</h6>
+          <h6>Letra J</h6>
+          <h6>-</h6>
+        </ul>
+        <ul>
+          <h6>Letra K</h6>
+          <h6>-</h6>
+          <h6>Letra L</h6>
+          <li><a href="#LeiturasEMeiosDeInformação">Leituras e meios de informação (028)</a></li>
+          <li><a href="#Literatura">Literatura (800)</a></li>
+          <li><a href="#LiteraturaAlema">Literatura Alemã (833)</a></li>
+          <li><a href="#LiteraturaAmericana">Literatura Americana (813)</a></li>
+          <li><a href="#LiteraturaBrasileira">Literatura Brasileira (869.9)</a></li>
+          <li><a href="#LiteraturaBrasileiraTeatro">Literatura Brasileira – teatro (869.92)</a></li>
+          <li><a href="#LiteraturaFrancesa">Literatura Francesa (843)</a></li>
+          <li><a href="#LiteraturaHispanicaLiteraturaItaliana">Literatura Hispânica/Literatura Italiana (850/860)</a>
+          </li>
+          <li><a href="#LiteraturaInglesa">Literatura Inglesa (820/823)</a></li>
+          <li><a href="#LiteraturaLatinaLiteraturaGrega">Literatura Latina/Literatura Grega (870/880)</a></li>
+          <li><a href="#LiteraturaPortuguesa">Literatura portuguesa (869)</a></li>
+          <li><a href="#OutrasLiteraturas">Outras Literaturas (880/890)</a></li>
+          <h6>Letra M</h6>
+          <li><a href="#Matematica">Matemática (510)</a></li>
+          <li><a href="#Musica">Música (780)</a></li>
+          <h6>Letra N</h6>
+          <h6>-</h6>
+          <h6>Letra O</h6>
+          <li><a href="#Origami">Origami (736.982)</a></li>
+          <h6>Letra P</h6>
+          <li><a href="#Pintura">Pintura (750)</a></li>
+          <li><a href="#Psicologia">Psicologia (150)</a></li>
+          <li><a href="#PoesiaBrasileira">Poesia Brasileira (869.91)</a></li>
+        </ul>
+        <ul>
+          <li><a href="#PoesiaInfantil">Poesia Infantil (P028.5i)</a></li>
+          <li><a href="#PoesiaPortuguesa">Poesia portuguesa (869.1)</a></li>
+          <h6>Letra Q</h6>
+          <li><a href="#QuimicaIndustrial">Química Industrial (660)</a></li>
+          <h6>Letra R</h6>
+          <li><a href="#Religiao">Religião (200)</a></li>
+          <li><a href="#Recreacao">Recreação (790)</a></li>
+          <li><a href="#RomanceBrasileiros">Romance Brasileiros (869.935)</a></li>
+          <li><a href="#RomancePortugues">Romance português (869.3)</a></li>
+          <li><a href="#Retorica">Retórica (808)</a></li>
+          <h6>Letra S</h6>
+          <h6>-</h6>
+          <h6>Letra T</h6>
+          <li><a href="#Teatro">Teatro (792)</a></li>
+          <li><a href="#TeoriaDoConhecimento">Teoria do conhecimento (000)</a></li>
+          <h6>Letra U</h6>
+          <li><a href="#UsosECostumes">Usos e costumes (392)</a></li>
+          <h6>Letra V</h6>
+          <h6>-</h6>
+          <h6>Letra W</h6>
+          <h6>-</h6>
+          <h6>Letra X</h6>
+          <h6>-</h6>
+          <h6>Letra Y</h6>
+          <h6>-</h6>
+          <h6>Letra Z</h6>
+          <h6>-</h6>
+          <h6>Infantil/Juvenil e Espéciais</h6>
+          <li><a href="#LiteraturaInfantil">Literatura Infantil (028.5i)</a></li>
+          <li><a href="#LiteraturaInfantilEmIngles">Literatura Infantil em Inglês (Li 028.5i)</a></li>
+          <li><a href="#LiteraturaJuvenil">Literatura Juvenil (028.5J)</a></li>
+          <li><a href="#LiteraturaJuvenilEmEspanhol">Literatura Juvenil em Espanhol (LE 028.5)</a></li>
+          <li><a href="#LiteraturaJuvenilEmIngles">Literatura Juvenil em Inglês (028.5J/ Li028.5)</a></li>
+          <li><a href="#LivroEmBraile">Livro em Braile</a></li>
+          <li><a href="#GuiaDoProfessor">Guia do Professor</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Conteúdo -->
+    <main>
+      <h3>Conteúdo (Ordem Númerica do ISBN)</h3>
+      <!-- Enciclopédia -->
+      <section id="Enciclopedia">
+        <section id="acervo" class="section acervo">
+          <h4>Enciclopédia</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Teoria do conhecimento (000) -->
+      <section id="TeoriaDoConhecimento">
+        <section id="acervo" class="section acervo">
+          <h4>Teoria do conhecimento (000)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Ciência da informação e biblioteca (020) -->
+      <section id="CienciaDaInformacaoEBiblioteca">
+        <section id="acervo" class="section acervo">
+          <h4>Ciência da informação e biblioteca (020)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Leituras e meios de informação (028) -->
+      <section id="LeiturasEMeiosDeInformação">
+        <section id="acervo" class="section acervo">
+          <h4>Leituras e meios de informação (028)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Atlas (030) -->
+      <section id="Atlas">
+        <section id="acervo" class="section acervo">
+          <h4>Atlas (030)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Dicionário (030)  -->
+      <section id="Dicionario">
+        <section id="acervo" class="section acervo">
+          <h4>Dicionário (030)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Filosofia (100) -->
+      <section id="Filosofia">
+        <section id="acervo" class="section acervo">
+          <h4>Filosofia (100)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Psicologia (150) -->
+      <section id="Psicologia">
+        <section id="acervo" class="section acervo">
+          <h4>Psicologia (150)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Religião (200) -->
+      <section id="Religiao">
+        <section id="acervo" class="section acervo">
+          <h4>Religião (200)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Ciências Sociais (300) -->
+      <section id="CienciasSociais">
+        <section id="acervo" class="section acervo">
+          <h4>Ciências Sociais (300)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Grupos Sociais (305) -->
+      <section id="GruposSociais">
+        <section id="acervo" class="section acervo">
+          <h4>Grupos Sociais (305)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Ciências Politicas (320) -->
+      <section id="CienciasPoliticas">
+        <section id="acervo" class="section acervo">
+          <h4>Ciências Politicas (320)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Economia (330) -->
+      <section id="Economia">
+        <section id="acervo" class="section acervo">
+          <h4>Economia (330)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Ecologia (340.2) -->
+      <section id="Ecologia">
+        <section id="acervo" class="section acervo">
+          <h4>Ecologia (340.2)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Bem estar social e Sustentabilidade (360) -->
+      <section id="BemEstarSocialESustentabilidade">
+        <section id="acervo" class="section acervo">
+          <h4>Bem estar social e Sustentabilidade (360)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Educação (370) -->
+      <section id="Educacao">
+        <section id="acervo" class="section acervo">
+          <h4>Educação (370)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Usos e costumes (392) -->
+      <section id="UsosECostumes">
+        <section id="acervo" class="section acervo">
+          <h4>Usos e costumes (392)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Folclore / Contos e Lendas (398/398.2) -->
+      <section id="FolcloreContosELendas">
+        <section id="acervo" class="section acervo">
+          <h4>Folclore/Contos e Lendas (398/398.2)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Contos de fadas Infanto- juvenil (398.21) -->
+      <section id="ContosDeFadasInfantoJuvenil">
+        <section id="acervo" class="section acervo">
+          <h4>Contos de fadas Infanto- juvenil (398.21)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Fábulas Infanto–Juvenil (398.2454) -->
+      <section id="FabulasInfantoJuvenil">
+        <section id="acervo" class="section acervo">
+          <h4>Fábulas Infanto–Juvenil (398.2454)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Gramática (469.5) -->
+      <section id="Gramatica">
+        <section id="acervo" class="section acervo">
+          <h4>Gramática (469.5)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Ciências (500) -->
+      <section id="Ciencias">
+        <section id="acervo" class="section acervo">
+          <h4>Ciências (500)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Geociências (550) -->
+      <section id="Geociencias">
+        <section id="acervo" class="section acervo">
+          <h4>Geociências (550)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Matemática (510) -->
+      <section id="Matematica">
+        <section id="acervo" class="section acervo">
+          <h4>Matemática (510)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Astronomia (520) -->
+      <section id="Astronomia">
+        <section id="acervo" class="section acervo">
+          <h4>Astronomia (520)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Física e química (530/540) -->
+      <section id="FisicaEQuimica">
+        <section id="acervo" class="section acervo">
+          <h4>Física e química (530/540)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Biologia (574) -->
+      <section id="Biologia">
+        <section id="acervo" class="section acervo">
+          <h4>Biologia (574)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Biologia em meio ambiente (580) -->
+      <section id="BiologiaEmMeioAmbiente">
+        <section id="acervo" class="section acervo">
+          <h4>Biologia em meio ambiente (580)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Ciência Medica e Saúde (610) -->
+      <section id="CienciaMedicaESaude">
+        <section id="acervo" class="section acervo">
+          <h4>Ciência Medica e Saúde (610)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Engenharia (620) -->
+      <section id="Engenharia">
+        <section id="acervo" class="section acervo">
+          <h4>Engenharia (620)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Alimentação (641) -->
+      <section id="Alimentacao">
+        <section id="acervo" class="section acervo">
+          <h4>Alimentação (641)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Administração (658) -->
+      <section id="Administracao">
+        <section id="acervo" class="section acervo">
+          <h4>Administração (658)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Química Industrial (660) -->
+      <section id="QuimicaIndustrial">
+        <section id="acervo" class="section acervo">
+          <h4>Química Industrial (660)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Artes (700) -->
+      <section id="Artes">
+        <section id="acervo" class="section acervo">
+          <h4>Artes (700)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+        </section>
+      </section>
+      <!-- Arquitetura (720) -->
+      <section id="Arquitetura">
+        <section id="acervo" class="section acervo">
+          <h4>Arquitetura (720)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Artes plásticas (730) -->
+      <section id="ArtesPlasticas">
+        <section id="acervo" class="section acervo">
+          <h4>Artes plásticas (730)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Origami (736.982) -->
+      <section id="Origami">
+        <section id="acervo" class="section acervo">
+          <h4>Origami (736.982)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- História em Quadrinhos -->
+      <section id="HistoriaEmQuadrinhos">
+        <section id="acervo" class="section acervo">
+          <h4>História em Quadrinhos (741.5)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Pintura (750) -->
+      <section id="Pintura">
+        <section id="acervo" class="section acervo">
+          <h4>Pintura (750)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Fotografia (770) -->
+      <section id="Fotografia">
+        <section id="acervo" class="section acervo">
+          <h4>Fotografia (770)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Música (780) -->
+      <section id="Musica">
+        <section id="acervo" class="section acervo">
+          <h4>Música (780)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Recreação (790) -->
+      <section id="Recreacao">
+        <section id="acervo" class="section acervo">
+          <h4>Recreação (790)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Teatro (792) -->
+      <section id="Teatro">
+        <section id="acervo" class="section acervo">
+          <h4>Teatro (792)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Esportes/Jogos (796) -->
+      <section id="EsportesJogos">
+        <section id="acervo" class="section acervo">
+          <h4>Esportes/Jogos (796)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Literatura (800) -->
+      <section id="Literatura">
+        <section id="acervo" class="section acervo">
+          <h4>Literatura (800)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Retórica (808) -->
+      <section id="Retorica">
+        <section id="acervo" class="section acervo">
+          <h4>Retórica (808)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Literatura Americana (813) -->
+      <section id="LiteraturaAmericana">
+        <section id="acervo" class="section acervo">
+          <h4>Literatura Americana (813)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- TartarugasAteLaEmbaixo  -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagens/imagensLivros/TartarugasAteLaEmbaixo.jpg" alt="TartarugasAteLaEmbaixo">
+                  <h5>-Tartarugas até lá embaixo</h5>
+                  <h6>Aza Holmes, uma jovem de 16 anos com TOC, busca um bilionário desaparecido para ganhar uma grande
+                    recompensa, enfrentando seus próprios desafios.
+                  </h6>
+                  <span>John green </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Literatura Inglesa (820/823) -->
+      <section id="LiteraturaInglesa">
+        <section id="acervo" class="section acervo">
+          <h4>Literatura Inglesa (820/823)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- OMeninoDoPijamaListrado -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/OMeninoDoPijamaListrado.jpg" alt="OMeninoDoPijamaListrado">
+                  <h5>-O Menino do Pijama Listrado</h5>
+                  <h6>É uma fábula sobre amizade em tempos de guerra, e sobre o que acontece quando a inocência é
+                    colocada diante de um monstro terrível e inimaginável.</h6>
+                  <span>John Boyne</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Literatura alemã (833) -->
+      <section id="LiteraturaAlema">
+        <section id="acervo" class="section acervo">
+          <h4>Literatura alemã (833)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Literatura Francesa (843) -->
+      <section id="LiteraturaFrancesa">
+        <section id="acervo" class="section acervo">
+          <h4>Literatura Francesa (843)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Literatura Hispânica/Literatura Italiana (850/860) -->
+      <section id="LiteraturaHispanicaLiteraturaItaliana">
+        <section id="acervo" class="section acervo">
+          <h4>Literatura Hispânica/Literatura Italiana (850/860)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Literatura portuguesa (869) -->
+      <section id="LiteraturaPortuguesa">
+        <section id="acervo" class="section acervo">
+          <h4>Literatura portuguesa (869)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Poesia portuguesa (869.1) -->
+      <section id="PoesiaPortuguesa">
+        <section id="acervo" class="section acervo">
+          <h4>Poesia portuguesa (869.1)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Romance português (869.3) -->
+      <section id="RomancePortugues">
+        <section id="acervo" class="section acervo">
+          <h4>Romance português (869.3)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Literatura Brasileira (869.9) -->
+      <section id="LiteraturaBrasileira">
+        <section id="acervo" class="section acervo">
+          <h4>Literatura Brasileira (869.9)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Poesia Brasileira (869.91) -->
+      <section id="PoesiaBrasileira">
+        <section id="acervo" class="section acervo">
+          <h4>Poesia Brasileira (869.91)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Literatura Brasileira – teatro (869.92) -->
+      <section id="LiteraturaBrasileiraTeatro">
+        <section id="acervo" class="section acervo">
+          <h4>Literatura Brasileira – teatro (869.92)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Contos Brasileiros (869.9301) -->
+      <section id="ContosBrasileiros">
+        <section id="acervo" class="section acervo">
+          <h4>Contos Brasileiros (869.9301)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- ContosReunidosLuizLopesCoelho -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/ContosReunidosLuizLopesCoelho.jpg" alt="ContosReunidosLuizLopesCoelho">
+                  <h5>-Contos Reunidos</h5>
+                  <h6>Os contos reunidos “A morte no envelope” , “O Homem Que Matava Quadros”, “A Ideia de Matar Belina”
+                    e “O crime literário” e nas investigações seu personagem central: o delegado Dr. Leite.
+                    O conto “A Ideia de Matar Tia Belina”, até hoje considerado pelos críticos um marco do suspense
+                    nacional.</h6>
+                  <span>Luis Lopes Coelho</span>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Crônicas Brasileiras (869.9308) -->
+      <section id="CronicasBrasileiras">
+        <section id="acervo" class="section acervo">
+          <h4>Crônicas Brasileiras (869.9308)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Romance Brasileiros (869.935) -->
+      <section id="RomanceBrasileiros">
+        <section id="acervo" class="section acervo">
+          <h4>Romance Brasileiros (869.935)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Literatura Latina/Literatura Grega (870/880) -->
+      <section id="LiteraturaLatinaLiteraturaGrega">
+        <section id="acervo" class="section acervo">
+          <h4>Literatura Latina/Literatura Grega (870/880)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Outras Literaturas (880/890) -->
+      <section id="OutrasLiteraturas">
+        <section id="acervo" class="section acervo">
+          <h4>Outras Literaturas (880/890)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- História Geral (909) -->
+      <section id="HistoriaGeral">
+        <section id="acervo" class="section acervo">
+          <h4>História Geral (909)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Geografia (910) -->
+      <section id="Geografia">
+        <section id="acervo" class="section acervo">
+          <h4>Geografia (910)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Geografia da América do Sul (918) -->
+      <section id="GeografiaDaAmericaDoSul">
+        <section id="acervo" class="section acervo">
+          <h4>Geografia da América do Sul (918)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Biografias (920) -->
+      <section id="Biografias">
+        <section id="acervo" class="section acervo">
+          <h4>Biografias (920)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Biografia de pintores (927.59) -->
+      <section id="BiografiaDePintores">
+        <section id="acervo" class="section acervo">
+          <h4>Biografia de pintores (927.59)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Biografia de Escritores, Historiadores e Críticos (928) -->
+      <section id="BiografiaDeEscritoresHistoriadoresECriticos">
+        <section id="acervo" class="section acervo">
+          <h4>Biografia de Escritores, Historiadores e Críticos (928)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- História do mundo antigo (930) -->
+      <section id="HistoriaDoMundoAntigo">
+        <section id="acervo" class="section acervo">
+          <h4>História do mundo antigo (930)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- História da Europa (940) -->
+      <section id="HistoriaDaEuropa">
+        <section id="acervo" class="section acervo">
+          <h4>História da Europa (940)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- História da Ásia (950) -->
+      <section id="HistoriaDaAsia">
+        <section id="acervo" class="section acervo">
+          <h4>História da Ásia (950)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- História da África (960) -->
+      <section id="HistoriaDaAfrica">
+        <section id="acervo" class="section acervo">
+          <h4>História da África (960)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- História da América do Norte (970) -->
+      <section id="HistoriaDaAmericaDoNorte">
+        <section id="acervo" class="section acervo">
+          <h4>História da América do Norte (970)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- História da América Central (972) -->
+      <section id="HistoriaDaAmericaCentral">
+        <section id="acervo" class="section acervo">
+          <h4>História da América Central (972)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- História da América do Sul (980) -->
+      <section id="HistoriaDaAmericaDoSul">
+        <section id="acervo" class="section acervo">
+          <h4>História da América do Sul (980)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- História do Brasil (981) -->
+      <section id="HistoriaDoBrasil">
+        <section id="acervo" class="section acervo">
+          <h4>História do Brasil (981)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+    <main>
+      <h3>Infantil/Juvenil e Espéciais</h3>
+      <!-- LiteraturaInfantil -->
+      <section id="LiteraturaInfantil">
+        <section id="acervo" class="section acervo">
+          <h4>Literatura Infantil (028.5i)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- OMarujo -->
+              <div class="swiper-slide">
+                <div class="acervos-item">
+                  <img src="imagens/imagensLivros/OMarujo.jpg" alt="OMarujo">
+                  <h5>-O Marujo</h5>
+                  <h6>o Marujo é um conto que faz parte do clássico As mil e uma noites e conta as aventuras de um
+                    marinheiro de Bagdá. A história é sobre Simbad, um homem rico que se torna um marujo e comerciante
+                    para recuperar a riqueza perdida da família. </h6>
+                  <span>Letra B (Stela Barbieri)</span>
+                </div>
+              </div>
+              <!-- BruxaOnildaVaiANovaIorque -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagens/imagensLivros/BruxaOnildaVaiANovaIorque.jpg" alt="BruxaOnildaVaiANovaIorque">
+                  <h5>-Bruxa onilda vai a nova iorque</h5>
+                  <h6>Bruxa Onilda Vai a Nova Iorque é um livro que conta as aventuras da Bruxa Onilda na Feira
+                    Internacional de Bruxologia e Ciências Ocultíssimas, em Nova Iorque.</h6>
+                  <span>Letra C (R. Capdevila)</span>
+                </div>
+              </div>
+              <!-- SuperImaEOMar -->
+              <style>
+                /* acervoS */
+                .acervos-item {
+                  background: var(--bege);
+                  padding: 10px;
+                  height: 400px;
+                  border-radius: 10px;
+                  text-align: center;
+                  width: 260px;
+                  /* Largura fixa para as caixas */
+                  display: flex;
+                  flex-direction: column;
+                  gap: 8px;
+                  color: #333;
+                  box-shadow: 0 6px 10px var(--vinho);
+                  justify-content: center;
+                  align-items: center;
+                  transform: rotateY(15deg) translateY(20px);
+                  /* Inicialmente fora da posição */
+                  opacity: 1;
+                  transition: transform 0.6s ease, opacity 0.6s ease;
+                }
+
+                .acervos-item h5 {
+                  font-size: 18px;
+                  font-style: italic;
+                  color: rgba(0, 0, 0, 0.880);
+                  margin-bottom: 1px;
+                }
+
+                .acervos-item h6 {
+                  font-size: 13px;
+                  font-family: Arial, sans-serif;
+                  color: rgba(0, 0, 0, 0.880);
+                  margin-bottom: 1px;
+                }
+
+                .acervos-item span {
+                  font-size: 14px;
+                  font-weight: bold;
+                  color: #000000;
+                }
+
+                /* pessoas envolvidas */
+                .acervos-item:hover {
+                  transform: scale(1.05) rotateY(0);
+                  /* Ampliar levemente */
+                  box-shadow: 0 2px 10px var(--vinho);
+                }
+
+
+                /* Ajusta o tamanho do contêiner do slider */
+                .swiper-container {
+                  width: 100%auto;
+                  max-width: 80px;
+                  margin: 0 auto;
+                }
+
+                /* Define o tamanho e o alinhamento das imagens */
+                .acervos-item img {
+                  width: 240px;
+                  height: 140px;
+                  border-radius: 2px;
+                }
+              </style>
+              <div class="swiper-slide">
+                <div class="acervos-item">
+                  <img src="imagens/imagensLivros/SuperImaEOMar.jpg" alt="SuperImaEOMar">
+                  <h5>-Superimã e o Mar</h5>
+                  <h6>Superimã e o Mar é um livro que conta a história de um super-herói super-ímã que tenta compreender
+                    os mistérios da vida. Para isso, ele decide procurar o ser mais sábio e maior, o mar.
+                    O livro aborda questões como o que é ser jovem e o que é ser velho. </h6>
+                  <span>Letra M (Selma Maria)</span>
+                </div>
+              </div>
+              <!-- Abzzzz -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagens/imagensLivros/Abzzzz.jpg" alt="Abzzzz">
+                  <h5>-Abzzzz...</h5>
+                  <h6>É um livro que apresenta um ABC do sono. O livro tem como objetivo fazer os leitores adormecerem
+                    antes de chegarem ao final do alfabeto. </h6>
+                  <span>Letra M (Isabel Minhós Martins)</span>
+                </div>
+              </div>
+              <!-- OMundoNoBlackPowerDeTayo -->
+              <div class="swiper-slide">
+                <div class="acervos-item">
+                  <img src="imagens/imagensLivros/OMundoNoBlackPowerDeTayo.jpg" alt="OMundoNoBlackPowerDeTayo">
+                  <h5>-O mundo no black power de Tayó</h5>
+                  <h6>
+                    Kayo, uma menina negra com cabelo crespo Black Power, enfrenta desafios na escola, mas mantém
+                    orgulho de sua identidade e história, enfeitando seus fios com alegria e positividade.<span>Letra O
+                      (Kiusam de Oliveira)</span>
+                </div>
+              </div>
+              <!-- ZumbiDosPalmaresIlustracoes -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagens/imagensLivros/ZumbiDosPalmaresIlustracoes.jpg" alt="ZumbiDosPalmaresIlustracoes">
+                  <h5>-Zumbi dos Palmares(Ilustrado)</h5>
+                  <h6>É um livro que apresenta um ABC do sono. O livro tem como objetivo fazer os leitores adormecerem
+                    antes de chegarem ao final do alfabeto. </h6>
+                  <span>Letra L (Renato Lima)</span>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Literatura Infantil em Inglês (Li 028.5i) -->
+      <section id="LiteraturaInfantilEmIngles">
+        <section id="acervo" class="section acervo">
+          <h4>Literatura Infantil em Inglês (Li 028.5i)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6></h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Poesia Infantil (P028.5i) -->
+      <section id="PoesiaInfantil">
+        <section id="acervo" class="section acervo">
+          <h4>Poesia Infantil (P028.5i)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- Literatura Juvenil -->
+      <section id="LiteraturaJuvenil">
+        <section id="acervo" class="section acervo">
+          <h4>Literatura Juvenil (028.5J)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- ASelecao -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagens/imagensLivros/ASelecao.jpg" alt="ASelecao">
+                  <h5>-A Seleção</h5>
+                  <h6>America Singer, uma garota da casta Cinco em Illéa, inscreve-se na Seleção para agradar sua mãe,
+                    sem imaginar que seria escolhida para mudar seu destino.
+                    <p><span>ATENÇÃO!</span> Este livro faz parte de uma coleção(Este é o primeiro livro)</p>
+                    <span>Letra C (Kiera Cass)</span>
+                    <p><a href="#">Veja quais da coleção nós temos</a></p>
+                  </h6>
+                </div>
+              </div>
+              <!-- AElite (Colocar no link da coleção) -->
+              <!-- <div class="swiper-slide">
+        <div class="acervo-item">
+          <img src="imagensLivros/AElite.jpg"  alt="AElite">
+          <h5>-A Elite</h5>
+          <h6>A Seleção começou com trinta e cinco garotas. 
+            Agora restam apenas seis, e a competição para ganhar o coração do príncipe Maxon está acirrada como nunca. 
+            Porém, quanto mais America se aproxima da coroa, mais se sente confusa.
+            <p>ATENÇÃO! Este livro faz parte de uma coleção(O primeiro é A seleção)</p></h6>
+          <span>Letra C (Kiera Cass)</span>
+        </div>
+      </div> -->
+              <!-- DiarioDeUmBanana -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagens/imagensLivros/DiarioDeUmBanana.jpg" alt="DiarioDeUmBanana">
+                  <h5>-Diario de um banana 1</h5>
+                  <h6>Greg, um garoto de 11 anos, enfrenta os desafios da pré-adolescência.
+                    Ele escreve um diário para compartilhar experiências, esperando tornar-se rico e famoso no futuro.
+                    <p><span>ATENÇÃO!</span> Este livro faz parte de uma coleção(Este é o primeiro livro)</p>
+                    <span>Letra K (Jeff Kinney)</span>
+                    <p><a href="#">Veja quais da coleção nós temos</a></p>
+                  </h6>
+                </div>
+              </div>
+              <!-- DiarioDeUmBanana2 (Colocar no link da coleção) -->
+              <!-- <div class="swiper-slide">
+        <div class="acervo-item">
+          <img src="imagensLivros/DiarioDeUmBanana2.jpg"  alt="DiarioDeUmBanana2">
+          <h5>-Diario de um banana 2</h5>
+          <h6>Greg volta às aulas querendo esquecer os últimos meses, especialmente um incidente. 
+            Porém, Rodrick, seu irmão, sabe do segredo e não vai deixá-lo em paz tão facilmente.
+            <p><span>ATENÇÃO!</span> Este livro faz parte de uma coleção(Este é o segundo livro)</p>
+          </h6>
+          <span>Letra K (Jeff Kinney)</span>
+        </div>
+      </div> -->
+              <!-- DiarioDeUmBanana3 (Colocar no link da coleção) -->
+              <!-- <div class="swiper-slide">
+        <div class="acervo-item">
+          <img src="imagensLivros/DiarioDeUmBanana3.jpg"  alt="DiarioDeUmBanana3">
+          <h5>-Diario de um banana 3</h5>
+          <h6>Greg vive se metendo em confusões, deixando seu pai, Frank, frustrado. 
+            Apesar de várias tentativas de corrigir o garoto, Greg estraga tudo. 
+            Até que uma grande ameaça muda a situação.
+            <p><span>ATENÇÃO!</span> Este livro faz parte de uma coleção(Este é o terceiro livro)</p>
+          </h6>
+          <span>Letra K (Jeff Kinney)</span>
+        </div>
+      </div> -->
+
+              <!-- FalaSerioMae -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagens/imagensLivros/FalaSerioMae.jpg" alt="FalaSerioMae">
+                  <h5>-Fala Sério, Mãe!</h5>
+                  <h6>É uma história bem-humorada sobre o cotidiano de Ângela Cristina e sua filha Malu, desde a
+                    gravidez até os 23 anos de Malu, atualizada para as confusões da vida nos anos 2020.
+                    <p><span>ATENÇÃO!</span> Este livro faz parte de uma coleção(Este é o primeiro livro)</p>
+                    <span>Letra </span>
+                    <p><a href="#">Veja quais da coleção nós temos </a></p>
+                  </h6>
+                </div>
+              </div>
+              <!-- JogosVorazes -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagens/imagensLivros/JogosVorazes.jpg" alt="JogosVorazes">
+                  <h5>-Jogos Vorazes</h5>
+                  <h6>Panem, formada por uma Capital e 12 distritos, surgiu após o fim dos EUA.
+                    Como punição por um levante, os distritos enviam jovens de 12 a 18 anos aos Jogos Vorazes anuais.
+                    <p><span>ATENÇÃO!</span> Este livro faz parte de uma coleção(Este é o primeiro livro)</p>
+                    <span>Letra C (Suzanne Collins)</span>
+                    <p><a href="#">Veja quais da coleção nós temos</a></p>
+                  </h6>
+                </div>
+              </div>
+              <!-- PorLugaresIncriveis -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagens/imagensLivros/PorLugaresIncriveis.jpg" alt="PorLugaresIncriveis">
+                  <h5>-Por lugares incríveis</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.
+                    <span>Letra N (Jennifer Niven)</span>
+                  </h6>
+                </div>
+              </div>
+              <!-- DiarioDeUmBanana3 -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagens/imagensLivros/DiarioDeUmBanana2.jpg" alt="DiarioDeUmBanana2">
+                  <h5>-Diario de um banana 2</h5>
+                  <h6>
+                    <p><span>ATENÇÃO!</span> Este livro faz parte de uma coleção(Este é o primeiro livro)</p>
+                    <span>Letra </span>
+                    <p><a href="#">Veja quais da coleção temos </a></p>
+                  </h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Literatura Juvenil em Inglês (028.5J/ Li028.5) -->
+      <section id="LiteraturaJuvenilEmIngles">
+        <section id="acervo" class="section acervo">
+          <h4>Literatura Juvenil em Inglês (028.5J/ Li028.5)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Literatura Juvenil em Espanhol (LE 028.5) -->
+      <section id="LiteraturaJuvenilEmEspanhol">
+        <section id="acervo" class="section acervo">
+          <h4>Literatura Juvenil em Espanhol (LE 028.5)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Fábulas e Folclore(398) -->
+      <section id="FabulasEFolclore">
+        <section id="acervo" class="section acervo">
+          <h4>Fábulas e Folclore(398)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Contos de Fadas Infanto-Juvenil(398.21) -->
+      <section id="ContosDeFadasInfantoJuvenil">
+        <section id="acervo" class="section acervo">
+          <h4>Contos de Fadas Infanto-Juvenil(398.21)</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+
+      <!-- Livro em Braile -->
+      <section id="LivroEmBraile">
+        <section id="acervo" class="section acervo">
+          <h4>Livro em Braile</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- OMeninoQueDescobriuOVento -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagens/imagensLivros/OMeninoQueDescobriuOVento(EdicaoEmBraile).jpg"
+                    alt="OMeninoQueDescobriuOVento">
+                  <h5>-O menino que descobriu o vento</h5>
+                  <h6>Um jovem de Malawi, cansado de ver as dificuldades de seu vilarejo, começa a criar uma turbina de
+                    vento inovadora, buscando soluções para melhorar a vida de todos.</h6>
+                </div>
+              </div>
+              <!-- OMonstroDasCoresVaiAEscola -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagens/imagensLivros/OMonstroDasCoresVaiAEscola(EdicaoEmBraileEFonteAmpliada).jpg"
+                    alt="OMonstroDasCoresVaiAEscola">
+                  <h5>-O monstro das cores vai a escola</h5>
+                  <h6>No seu primeiro dia de aula, o monstro descobre que a escola é um lugar cheio de emoções, onde se
+                    pergunta se será uma nuvem mágica ou uma selva cheia de armadilhas.</h6>
+                </div>
+              </div>
+              <!-- OGrandeRabanete -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagens/imagensLivros/OGrandeRabanete(EdicaoEmBraileEFonteAmpliada).jpg"
+                    alt="OGrandeRabanete">
+                  <h5>-O grande rabanete</h5>
+                  <h6>Vovô, vovó, netinha e Totó tentam arrancar um teimoso rabanete.
+                    A tarefa impossível para um só é superada com a colaboração de todos.</h6>
+                </div>
+              </div>
+              <!-- FelpoFilva -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagens/imagensLivros/FelpoFilva(EdicaoEmBraileEFonteAmpliada).jpg" alt="FelpoFilva">
+                  <h5>-Felpo Filva</h5>
+                  <h6>Felpo, um coelho poeta, tornou-se solitário e taciturno por ser diferente.
+                    Na infância, era zombado pelos colegas por ter uma orelha menor que a outra, o que marcou sua vida.
+                  </h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+      <!-- Guia do Professor -->
+      <section id="GuiaDoProfessor">
+        <section id="acervo" class="section acervo">
+          <h4>Guia do Professor</h4>
+          <div class="swiper-container">
+            <!-- div de container que rolam -->
+            <div class="swiper-wrapper">
+              <!-- BibliotecaDaMeiaNoite -->
+              <div class="swiper-slide">
+                <div class="acervo-item">
+                  <img src="imagensLivros/BibliotecaDaMeiaNoite.jpg" alt="BibliotecaDaMeiaNoite">
+                  <h5>- Biblioteca Da Meia Noite</h5>
+                  <h6>Dois adolescentes que estão passando por momentos difíceis criam um forte laço quando embarcam em
+                    uma jornada transformadora para visitar as maravilhas do estado de Indiana, nos Estados Unidos.</h6>
+                </div>
+              </div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+    <!-- Botão para voltar ao topo -->
+    <button id="backToTop" class="btn btn-primary">⬆ Topo</button>
+    <!-- Footer -->
+    <footer class="footer mt-4">
+      <div class="container">
+        <p>&copy; 2024 Biblioteca Sesi Sorocaba - Nick Chirai</p>
+      </div>
+    </footer>
+
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        console.log('Site de Notícias carregado com sucesso!');
+      });
+      const backToTopButton = document.getElementById('backToTop');
+
+      // Mostrar ou esconder o botão ao rolar a página
+      window.addEventListener('scroll', () => {
+        if (window.scrollY > 1000) {
+          backToTopButton.style.display = 'block';
+        } else {
+          backToTopButton.style.display = 'none';
+        }
+      });
+
+      // Rolar suavemente para o topo ao clicar no botão
+      backToTopButton.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+
+    </script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+      crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+      crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

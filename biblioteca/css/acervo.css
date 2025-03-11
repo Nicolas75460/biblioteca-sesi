@@ -1,0 +1,376 @@
+/* Define em 0 os espaçamentos e margens da página */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define um histórico de cores bases do site */
+:root{
+    --vinho: #850505;
+    --vinhoescuro: #5c0101;
+    --vinhotransparente:#a50000d0;
+    --bege: #fff0d1;
+    --begegradiente: #fff0d1c0;
+    --letrasGrandes: #b01010;
+    --fundo: #f76f6f;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+    background-color: var(--bege);
+}
+
+
+.section {
+    padding: 30px 20px;
+    min-height: 10vh;
+}
+
+.header {
+    background-color: var(--vinho);
+    color: var(--bege);
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    /* Garantir que o header fique no topo, mas abaixo do menu */
+    height: 80px;
+    /* Define a altura fixa do header */
+}
+
+.side-menu {
+    width: 300px;
+    background: var(--vinhoescuro);
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    /* Fora da tela por padrão */
+    transition: 0.4s;
+    z-index: 1500;
+    /* Garantir que fique acima do header */
+    box-shadow: -2px 0 5px --bege;
+    padding-top: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.side-menu ul {
+    list-style: none;
+    padding: 0 20px;
+}
+
+.side-menu ul li {
+    margin: 20px 0;
+}
+
+.side-menu ul li a {
+    width: 280px;
+    color: var(--bege);
+    text-decoration: none;
+    font-size: 20px;
+    display: block;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.side-menu ul li a:hover {
+    background: var(--fundo);
+    width: 270px;
+}
+
+/* Botão de fechar no menu */
+.close-btn {
+    background: transparent;
+    border: none;
+    color: var(--bege);
+    font-size: 25px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+/* Estilo do índice */
+#indice {
+    background-color: #85050544;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+#indice h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 40px;
+}
+
+.colunas {
+    display: flex;
+    /* Organiza em colunas */
+    gap: 20px;
+    /* Espaço entre as colunas */
+}
+
+.colunas ul {
+    list-style: none;
+    /* Remove marcadores */
+    padding: 0;
+}
+
+.colunas li {
+    margin-bottom: 10px;
+}
+
+.colunas a {
+    text-decoration: none;
+    color: var(--vinho);
+}
+
+.colunas a:hover {
+    text-decoration: underline;
+    color: #000000;
+}
+
+/* Estilo das seções bege */
+#LiteraturaInfantil,
+#Enciclopedia,
+#Atlas,
+#CienciaDaInformacaoEBiblioteca,
+#Filosofia,
+#Religiao,
+#GruposSociais,
+#Economia,
+#BemEstarSocialESustentabilidade,
+#UsosECostumes,
+#Gramatica,
+#Geociencias,
+#Astronomia,
+#Biologia,
+#CienciaMedicaESaude,
+#Alimentacao,
+#QuimicaIndustrial,
+#Arquitetura,
+#Origami,
+#Pintura,
+#Musica,
+#Teatro,
+#Literatura,
+#LiteraturaAmericana,
+#LiteraturaAlema,
+#LiteraturaHispanicaLiteraturaItaliana,
+#PoesiaPortuguesa,
+#LiteraturaBrasileira,
+#LiteraturaBrasileiraTeatro,
+#CronicasBrasileiras,
+#LiteraturaLatinaLiteraturaGrega,
+#HistoriaGeral,
+#GeografiaDaAmericaDoSul,
+#BiografiaDePintores,
+#HistoriaDoMundoAntigo,
+#HistoriaDaAsia,
+#HistoriaDaAmericaDoNorte,
+#HistoriaDaAmericaDoSul {
+    margin-bottom: 10px;
+    background-color: #fce4b3;
+    border-radius: 10px;
+}
+
+#LiteraturaInfantil,
+#PoesiaInfantil,
+#LiteraturaJuvenilEmIngles,
+#FabulasEFolclore,
+#LivroEmBraile {
+    margin-bottom: 10px;
+    background-color: #fcceb3;
+    border-radius: 10px;
+}
+
+/* ENVOLVIDOS */
+.envolvidos-item {
+    background: var(--bege);
+    padding: 10px;
+    height: 400px;
+    border-radius: 10px;
+    text-align: center;
+    width: 260px;
+    /* Largura fixa para as caixas */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #333;
+    box-shadow: 0 6px 10px var(--vinho);
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(15deg) translateY(20px);
+    /* Inicialmente fora da posição */
+    opacity: 1;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.envolvidos-item h5 {
+    font-size: 18px;
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.880);
+    margin-bottom: 1px;
+}
+
+.envolvidos-item h6 {
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+    color: rgba(0, 0, 0, 0.880);
+    margin-bottom: 1px;
+}
+
+.envolvidos-item span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* pessoas envolvidas */
+.envolvidos-item:hover {
+    transform: scale(1.05) rotateY(0);
+    /* Ampliar levemente */
+    box-shadow: 0 2px 10px var(--vinho);
+}
+
+/* Ajusta o tamanho do contêiner do slider */
+.swiper-container {
+    width: 100%auto;
+    max-width: 80px;
+    margin: 0 auto;
+}
+
+/* Define o tamanho e o alinhamento das imagens */
+.envolvidos-item img {
+    width: 120px;
+    height: 180px;
+    border-radius: 2px;
+}
+
+/* ensinoMedio */
+.ensinoMedio-item {
+    background: var(--bege);
+    padding: 12px;
+    height: 400px;
+    border-radius: 10px;
+    text-align: center;
+    width: 260px;
+    /* Largura fixa para as caixas */
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    color: #333;
+    box-shadow: 0 6px 10px var(--vinho);
+    justify-content: center;
+    align-items: center;
+    transform: rotateY(15deg) translateY(20px);
+    /* Inicialmente fora da posição */
+    opacity: 1;
+    transition: transform 0.6s ease, opacity 0.6s ease;
+}
+
+.ensinoMedio-item h5 {
+    font-size: 18px;
+    font-style: italic;
+    color: rgba(0, 0, 0, 0.880);
+    margin-bottom: 1px;
+}
+
+.ensinoMedio-item h6 {
+    font-size: 13px;
+    font-family: Arial, sans-serif;
+    color: rgba(0, 0, 0, 0.880);
+    margin-bottom: 1px;
+}
+
+.ensinoMedio-item span {
+    font-size: 14px;
+    font-weight: bold;
+    color: #000000;
+}
+
+/* pessoas envolvidas */
+.ensinoMedio-item:hover {
+    transform: scale(1.05) rotateY(0);
+    /* Ampliar levemente */
+    box-shadow: 0 2px 10px var(--vinho);
+}
+
+
+/* Ajusta o tamanho do contêiner do slider */
+.swiper-container {
+    width: 100%auto;
+    max-width: 80px;
+    margin: 0 auto;
+}
+
+/* Define o tamanho e o alinhamento das imagens */
+.ensinoMedio-item img {
+    width: 200px;
+    height: 180px;
+    border-radius: 2px;
+}
+
+
+h2 {
+    color: var(--letrasGrandes);
+    display: flex;
+    justify-content: center;
+    font-family: "don";
+    font-size: 45px;
+    letter-spacing: 2px;
+}
+
+.subtitle {
+    color: var(--bege);
+}
+
+h3 {
+    color: var(--fundo);
+    align-content: flex-start;
+    justify-content: center;
+    font-family: "don";
+    font-size: 40px;
+    letter-spacing: 2px;
+    padding: 20px;
+}
+
+h4 {
+    color: var(--fundo);
+    align-content: flex-start;
+    justify-content: center;
+    font-family: "don";
+    font-size: 30px;
+    letter-spacing: 1px;
+}
+
+/* botão de voltar ao topo */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    z-index: 1000;
+}
+
+.footer {
+    background-color: #000;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 10px;
+}
+
+.footer p {
+    margin: 5px 0;
+}
