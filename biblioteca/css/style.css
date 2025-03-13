@@ -20,10 +20,7 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    padding-top: 80px; /* Espaço para o header fixo */
 }
 
 .header {
@@ -38,19 +35,23 @@ body {
     top: 0;
     left: 0;
     z-index: 1000;
-    /* Garantir que o header fique no topo, mas abaixo do menu */
     height: 80px;
-    /* Define a altura fixa do header */
+}
+
+.carousel-item {
+    width: auto;
+    height: 600px;
 }
 
 .container {
     background-color: #fff;
     border: 2px solid #ccc;
     border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgba(118, 118, 118, 0.2);
     max-width: 600px;
     padding: 20px;
     text-align: center;
+    margin: 20px auto;
 }
 
 .container h1 {
@@ -70,4 +71,66 @@ body {
 .container .location {
     color: #666;
     font-weight: bold;
+}
+
+/* Estilos para o container de novidades */
+.novidades-container {
+    background-color: var(--bege);
+    padding: 20px;
+    text-align: center;
+    margin: 20px auto;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.novidades-titulo h1 {
+    color: var(--vinho);
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/* Estilos para o carrossel de comentários */
+#carouselComentarios {
+    margin: 40px auto;
+    max-width: 600px;
+}
+
+.comentario {
+    background-color: var(--bege);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* Estilos para o rodapé */
+.footer {
+    background-color: var(--vinho);
+    color: var(--bege);
+    padding: 20px;
+    text-align: center;
+    margin-top: 40px;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    #carouselComentarios {
+        width: 90%;
+    }
+
+    .novidades-container {
+        width: 90%;
+    }
 }
